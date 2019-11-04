@@ -1,0 +1,24 @@
+.appbar-root{
+  background: rgba(0,0,0,0) !important;
+  /* box-shadow: none !important; */
+}
+
+
+.appbar-links{
+  margin-right: 0;
+  margin-left: auto;
+  font-size: 1.3em;
+}
+
+
+.appbar-link{
+  color: rgb(150,150,150);
+  padding: 0 12px;
+  text-decoration: none;
+  transition: all .4s;
+}
+
+.link-active{
+  color: salmon;
+  text-shadow: 0 0 4px salmon;
+}
