@@ -10,9 +10,9 @@ class HomeModule extends PureComponent{
 
   render(){
     return(
-      <Paper classes={{root: 'home-module-root'}} style={{background: {this.props.image}}}>
-        <Typography variant="h4">{this.props.title}</Typography>
-        <Typography variant="body2">{this.props.details}</Typography>
+      <Paper classes={{root: 'home-module-root'}} style={{backgroundImage: this.props.image}}>
+        <Typography className="home-module-title" >{this.props.title}</Typography>
+        <Typography className="home-module-detail" >{this.props.details}</Typography>
       </Paper>
     );
   }
