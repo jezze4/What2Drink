@@ -1,27 +1,28 @@
 .home-module-root{
-  /* height: 30vw; */
-  background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.5), rgba(0,0,0,.3)), url('../assets/home_coke.jpg');
-  background-size: 200%;
-  background-position: center;
+  /* background: linear-gradient(rgba(200,50,50,.2),rgba(200,50,50,.5), rgba(200,50,50,.3)), url('../assets/home_coke.jpg'); */
+  background-size: 200% !important;
+  background-position: center !important;
   background-repeat: no-repeat;
-  transition: background-size .5s !important;
-  padding: 12vw 0;
+  transition: all .3s !important;
+  padding: 12vmin 0;
   border-radius: 20px !important;
+  box-shadow: 0 2px 4px black !important;
 }
 
 .home-module-root:hover{
   /* transform: scale(1.2); */
-  background-size: 220%;
+  background-size: 220% !important;
+  box-shadow: 0 4px 8px black !important;
 }
 
 .home-module-title{
-  font-size: 4vw !important;
+  font-size: 4vmax !important;
   color: whitesmoke;
   text-shadow: 0 0 20px black;
 }
 
 .home-module-detail{
-  font-size: 2vmin !important;
+  font-size: 2vh !important;
   text-shadow: 0 0 10px black;
   color: white;
   opacity: .8;

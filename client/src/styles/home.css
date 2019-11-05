@@ -1,0 +1,10 @@
+.home-container-mobile{
+  height: 100vh;
+  padding-top: 10vh;
+}
+
+.home-container{
+  height: 100vh;
+  /* padding-top: 20vh; */
+  align-items: center;
+}

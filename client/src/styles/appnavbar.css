@@ -1,18 +1,19 @@
 .appbar-root{
   background: rgba(0,0,0,0) !important;
-  /* box-shadow: none !important; */
+  position: absolute !important;
+  box-shadow: 0 0 0 black !important;
 }
 
 
 .appbar-links{
   margin-right: 0;
   margin-left: auto;
-  font-size: 1.3em;
+  font-size: 3vmin;
 }
 
 
 .appbar-link{
-  color: rgb(150,150,150);
+  color: whitesmoke;
   padding: 0 12px;
   text-decoration: none;
   transition: all .4s;
@@ -21,4 +22,27 @@
 .link-active{
   color: salmon;
   text-shadow: 0 0 4px salmon;
+}
+
+.nav-tabs-root{
+  position: absolute;
+  right: 0;
+}
+
+.nav-tabs-indicator{
+  display: none;
+}
+
+.nav-tab-root{
+  color: whitesmoke !important;
+  font-size: 1rem !important;
+  text-transform: lowercase !important;
+  /* min-height: auto !important;
+  min-width: auto !important;
+  padding: 8px 24px !important; */
+}
+
+.nav-tab-selected{
+  border: 1px solid whitesmoke !important;
+  border-radius: 50px !important;
 }

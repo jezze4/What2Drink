@@ -1,4 +1,15 @@
 .App {
   text-align: center;
   font-family: Roboto;
+  background: radial-gradient(farthest-corner at 50% 150%, azure, cornflowerblue);
+  padding: 0 16px;
+}
+
+.App-mobile{
+  background: radial-gradient(circle farthest-side at 50% 150%, azure, cornflowerblue);
+  overflow-y: hidden;
+}
+
+body{
+  margin: 0;
 }
