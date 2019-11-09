@@ -8,6 +8,7 @@ import './App.css';
 import './styles/home.css';
 import './styles/appnavbar.css';
 import './styles/homemodule.css';
+import './styles/animations.css';
 
 const mobileCheck = () => {
   var check = false;
@@ -30,10 +31,16 @@ class App extends PureComponent {
     return (
       <div className={"App " + ((isMobile)?"App-mobile":"App-desktop")}>
         <Router>
-          <AppNavbar />
-          <Switch>
-            <Route exact path="/" render={() => <Home isMobile={this.state.isMobile}/>}/>
-          </Switch>
+          <Route path="/" render={({location}) => (
+            <div>
+              <AppNavbar path="location"/>
+              <Switch>
+                <Route exact path="/" render={() => <Home isMobile={this.state.isMobile}/>}/>
+                <Route exact path="/about" render={() => <div><h1>about</h1></div>}/>
+                <Route exact path="/contact" render={() => <div><h1>contact</h1></div>}/>
+              </Switch>
+            </div>
+            )}/>
         </Router>
       </div>
     );

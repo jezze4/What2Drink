@@ -21,25 +21,25 @@ class Home extends PureComponent {
         justify="space-evenly">
         <Grid item sm={3}>
           <HomeModule
-            title="Soft Drinks"
-            details="Various kinds of soft drinks - from Coke to La Croix"
-            link="/soft-drinks"
+            title="soft drinks"
+            details="From Coke to La Croix"
+            link="/softdrinks"
             image={ImageSodas}
           />
         </Grid>
         <Grid item sm={3}>
           <HomeModule
-            title="Alcohol"
+            title="alcohol"
             details="From beer to fruity mixed drinks"
-            link="/soft-drinks"
+            link="/alcohol"
             image={(isMobile)?ImageAlcohol2:ImageAlcohol2}
           />
         </Grid>
         <Grid item sm={3}>
           <HomeModule
-            title="Teas"
+            title="teas"
             details="Because, why not"
-            link="/soft-drinks"
+            link="/teas"
             image={ImageTeas}
           />
         </Grid>

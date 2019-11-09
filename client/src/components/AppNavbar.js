@@ -4,20 +4,16 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import {Link} from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 
 class AppNavbar extends PureComponent {
 
-  state = {
-    value: window.location.pathname,
-  }
-
-  handleChange = (event, value) => {
-    this.setState({value});
-  }
+  // handleChange = (event, value) => {
+  //   this.setState({value});
+  // }
 
   render(){
-    const { value } = this.state;
+    const value = this.props.location.pathname;
     return(
       <AppBar color="default" classes={{root: 'appbar-root'}}>
         <Toolbar>
@@ -26,7 +22,6 @@ class AppNavbar extends PureComponent {
           <Tabs
             classes={{root: 'nav-tabs-root', indicator: 'nav-tabs-indicator'}}
             value={value}
-            onChange={this.handleChange}
             >
             <Tab
             classes={{root: 'nav-tab-root', selected: 'nav-tab-selected'}}
@@ -74,4 +69,4 @@ class AppNavbar extends PureComponent {
   }
 }
 
-export default AppNavbar;
+export default withRouter(AppNavbar);
