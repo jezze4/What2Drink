@@ -1,15 +1,29 @@
+*{
+  margin: 0;
+}
+
 .App {
   text-align: center;
   font-family: Roboto;
-  background: radial-gradient(farthest-corner at 50% 150%, crimson, black);
-  padding: 0 16px;
+  background: radial-gradient(farthest-corner at 50% 150%, crimson, rgb(55,2,15));
+  /* padding: 0 16px; */
+  min-height: 100vh;
+  margin: 0 !important;
 }
 
 .App-mobile{
-  background: radial-gradient(circle farthest-side at 50% 150%, azure, cornflowerblue);
+  background: radial-gradient(circle farthest-side at 50% 150%, crimson, crimson, rgb(55,2,15));
   overflow-y: hidden;
 }
 
-body{
-  margin: 0;
+.directory-container{
+  padding-top: 80px;
+  height: calc(100vh - 80px);
+  animation: slideUp .5s ease-out forwards;
+}
+
+.directory-container-m{
+  padding-top: 130px;
+  height: calc(100vh - 130px);
+  animation: slideUp .8s ease-out forwards;
 }

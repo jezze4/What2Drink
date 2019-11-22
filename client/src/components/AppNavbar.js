@@ -8,12 +8,9 @@ import {withRouter, Link} from 'react-router-dom';
 
 class AppNavbar extends PureComponent {
 
-  // handleChange = (event, value) => {
-  //   this.setState({value});
-  // }
-
   render(){
-    const value = this.props.location.pathname;
+    var value = this.props.location.pathname;
+    if (value !== "/about" && value !== "/contact") value = '/'
     return(
       <AppBar color="default" classes={{root: 'appbar-root'}}>
         <Toolbar>
@@ -21,8 +18,7 @@ class AppNavbar extends PureComponent {
 
           <Tabs
             classes={{root: 'nav-tabs-root', indicator: 'nav-tabs-indicator'}}
-            value={value}
-            >
+            value={value}>
             <Tab
             classes={{root: 'nav-tab-root', selected: 'nav-tab-selected'}}
             label="Home"

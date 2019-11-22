@@ -3,6 +3,7 @@ import AppNavbar from './components/AppNavbar';
 import { Switch, Route, BrowserRouter as Router} from "react-router-dom";
 
 import Home from './pages/Home.js'
+import Directory from './pages/Directory.js'
 
 import './App.css';
 import './styles/home.css';
@@ -36,8 +37,17 @@ class App extends PureComponent {
               <AppNavbar path="location"/>
               <Switch>
                 <Route exact path="/" render={() => <Home isMobile={this.state.isMobile}/>}/>
-                <Route exact path="/about" render={() => <div><h1>about</h1></div>}/>
-                <Route exact path="/contact" render={() => <div><h1>contact</h1></div>}/>
+                <Route exact path="/about" render={() => <Home />}/>
+                <Route exact path="/contact" render={() => <Home />}/>
+                <Route exact path="/:directory" render={() =>
+                  <div
+                    className={
+                      (isMobile)
+                        ?'directory-container-m'
+                        :'directory-container'}>
+                    <Directory />
+                  </div>}
+                />
               </Switch>
             </div>
             )}/>
